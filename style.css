@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(253,4,158,0.5),rgba(255,255,255,0.84),
+    rgba(253,4,158,0.5)),url("background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center fixed;
+}
+:root{
+    --navbarcolor:rgb(252,5,108);
+}
+.navbar{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar::after{
+    content: "";
+    background-color: rgb(3,3,3);
+    opacity: 0.5;
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.imglogo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 15px 60px;
+    border: 3px solid #000;
+    box-shadow: 2px 2px 5px #000;
+}
+nav ul{
+    margin: 15px 60px;
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    padding: 4px 10px;
+    margin-right: 5px;
+    text-align: center;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-family: 'Dancing Script', cursive;
+    align-content: center;
+}
+nav ul li:hover{
+    border-radius: 30px;
+    background-color: #000;
+    border: none;
+    align-content: center;
+}
+nav ul li a:hover{
+    color: var(--navbarcolor);
+    text-shadow: -1px 0 var(--navbarcolor),0 1px var(--navbarcolor),
+    1px 0 var(--navbarcolor),0 -1px var(--navbarcolor);
+}
+.header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+.header-text #text1,#text2{
+    font-size: 18px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+.header-text h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 160px;
+    text-align: center;
+    color: var(--navbarcolor);
+    text-shadow: -1px 0 var(--navbarcolor),0 1px var(--navbarcolor),
+    1px 0 var(--navbarcolor),0 -1px var(--navbarcolor);
+}
+.header-text h1::first-letter{
+    color: #fff;
+    text-shadow: -4px 0 var(--navbarcolor),0 4px var(--navbarcolor),
+    4px 0 var(--navbarcolor),0 -4px var(--navbarcolor);
+}
+.header-text #text2::first-line{
+    color: var(--navbarcolor);
+    margin-top: 30px;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+
+}
+#aboutus{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,rgba(15,15,15,0.5),
+    rgba(255,255,255,0.8),rgba(7,7,7,0.5));
+}
+.titletext{
+    font-size: 70px;
+    text-align: center;
+    padding: 50px 0;
+    font-family:'Dancing Script', cursive ;
+    text-shadow:-1px 0 var(--navbarcolor),0 1px var(--navbarcolor),
+    1px 0 var(--navbarcolor),0 -1px var(--navbarcolor); ;
+}
+.titletext::first-letter{
+    color: #fff;
+    text-shadow: -4px 0 #000, 0 4px #000, 4px 0 #000, 0 -4px #000 ;
+    font-size: 150px;
+}
+.abouttext{
+    display: flex;
+    align-items: center;
+}
+.abt-img{
+    flex-basis: 50%;
+}
+.abt-img img{
+    width: 80%;
+    height: 300px;
+    margin-left: 50px;
+    border-radius: 50px;
+}
+.about_text_para{
+    flex-basis: 50%;
+}
+.about_text_para{
+    font-family: 'Dancing Script', cursive;
+    margin-right: 50px;
+    font-size: 15px;   
+}
+p::first-letter{
+    font-family:'Dancing Script', cursive ;
+    color: rgba(253,4,158,0.5);
+    font-size: 60px;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000 ;
+
+}
+p::first-line{
+    font-family:'Dancing Script', cursive ;
+    color: #000;
+    text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff ;
+    font-size: 20px;
+    font-weight: bold;
+}
+#flavours{
+    width: 50%;
+}
+#flavours .flavourimg{
+    width: 50%;
+    height: 70%;
+    margin: 0 700px;
+    border-radius: 150px;
+}
+.flavour-container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+}
+.flavour-box{
+    box-shadow: 2px 2px 15px var(--navbarcolor);
+    margin: 0 50px 40px 35px;
+    border-radius: 20px;
+    transition: transform .4s;
+    
+}
+.flavour-box:hover{
+    transform: translateY(-9px);
+    box-shadow: 2px 2px 15px #000;
+}
+.flavour-box img{
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: fill;
+}
+.flavour-box h2{
+    text-align: center;
+}
+#articles{
+    background: linear-gradient(to right,rgba(15,15,15,0.5),
+    rgba(255,255,255,0.8),rgba(7,7,7,0.5));
+    padding-bottom: 20px;
+
+}
+.article-container{
+    width: 90%;
+    margin: auto;
+}
+.article-box{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.article-box img{
+    flex-basis: 50%;
+    width: 80%;
+    height: 300px;
+    object-fit: contain;
+    transition: transform .4s;   
+}
+.article-box img:hover{
+    transform: translateY(19px);
+    box-shadow: 2px 2px 15px  rgb(250,247,247);
+
+}
+.article-box{
+    flex-basis: 50%;
+    font-family: 'Dancing Script', cursive;
+}
+#booking{
+    padding-bottom: 40px;
+
+}
+.order-container
+{
+    width: 60%;
+    margin: auto;
+    border: 1px solid #fff;
+    background:linear-gradient(rgba(253,4,158,0.5),rgba(255,255,255,0.84),
+    rgba(253,4,158,0.5));
+    box-shadow: 2px 2px 15px #000;
+}
+.order-box{
+    margin: 30px 0;
+    text-align: center;
+}
+.order-box input{
+    width: 70%;
+    margin: auto;
+    border-radius: 50px;
+    padding: 17px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 15px var(--navbarcolor);
+}
+.order-btn{
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.order-btn button{
+    width: 200px;
+    height: 60px;
+    margin: 30px 0 0 50px;
+    display: inline-block;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 15px var(--navbarcolor);
+    transition: transform .4s;  
+    position: relative;
+    z-index: 1; 
+}
+.order-btn button:hover{
+    transform: translateY(-10px);
+    box-shadow: 2px 2px 15px  #fff;   
+}
+.order-btn button a{
+    font-family: 'Dancing Script', cursive;
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--navbarcolor);
+    text-shadow:-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000  ;
+    letter-spacing: 2px; 
+    transition: color .4s;
+}
+.order-btn button:hover a{
+    color: #fff;
+}
+.order-btn button a span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--navbarcolor);
+    width: 50%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: -1;
+}
+.order-btn button a span{
+    width: 100%;
+    height: 100%;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-left-text{
+    display: flex;
+    align-items: center;
+}
+/* .footer-left-text .fa{
+    font-size: 25px;
+    margin-left: 20px;
+    color: var(--navbarcolor);
+    text-shadow:-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000  ;
+} */
+.footer-container .footer-left{
+    margin-left: 50px;
+
+}
+.footer-container .footer-address{
+    margin-right: 50px;
+}
+.footer-container .footer-left, .footer-container .footer-address,
+.footer-container .footer-right{
+    flex-basis: 33.3%;
+}
+ .links{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+} 
+.links .fa{
+    color: var(--navbarcolor);
+    margin-right: 20px;
+    padding: 10px;
+    text-shadow:-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000  ; 
+    transition: transform .6s;
+} 
+.links .fa:hover{
+    
+    text-shadow: -1px 0 var(--navbarcolor),0 1px var(--navbarcolor),
+    1px 0 var(--navbarcolor),0 -1px var(--navbarcolor);
+    transform: translateX(-16px);
+
+} 
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-reddit {
+    background: #ff5700;
+    color: white;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 60px;
+    text-decoration: none;
+    margin: 5px 80px;
+}
